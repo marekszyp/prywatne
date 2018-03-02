@@ -1,5 +1,5 @@
 #include <iostream>
-#include <math.h>
+#include<math.h>
 using namespace std;
 
 class Point
@@ -25,12 +25,12 @@ public:
 };
 float distance(Point a, Point b)
 {
-    float odleglosc;
+    float dist;
     Point c = Point();
-    c.getX() = b.getX()-a.getX();
-    c.getY() = b.getY()-a.getY();
-    odleglosc = sqrt(pow(c.getX(), 2)+pow(c.getY(), 2));
-    return odleglosc;
+    c.getX = b.getX()-a.getX();
+    c.getY = b.getY()-a.getY();
+    dist = sqrt(pow(c.getX(), 2)+pow(c.getY(), 2));
+    return dist;
 }
 int main(int argc, char *argv[])
 {
@@ -38,8 +38,7 @@ int main(int argc, char *argv[])
 	a.set(6.2, 5.4);
 	Point b = Point();
 	b.set(3.1, 1.8);
-	float odleglosc = distance(a.set, b.set);
-	cout << "Odleglosc miedzy punktami: "<<odleglosc<<endl;
+	cout << "Odleglosc miedzy punktami: "<<dist(a,b)<<endl;
 
     return 0;
 }
