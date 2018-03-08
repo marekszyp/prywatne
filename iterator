@@ -1,0 +1,14 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+int main(int argc, char *argv[])
+{
+    string n1;
+    cin >> n1;
+    for(string::iterator it = n1.begin(); it != n1.end(); it++)
+        cout<<*it;
+    return 0;
+}
