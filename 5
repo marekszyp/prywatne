@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+
+
+int main(int argc, char *argv[])
+{
+
+    ofstream plik;
+    plik.open(sciezka);
+    plik << napis;
+    plik.close();
+   ifstream plik2;
+   string wiersz;
+   plik2.open(sciezka);
+   while( getline(plik2, wiersz))
+           cout<<wiersz<<endl;
+    return 0;
+}
