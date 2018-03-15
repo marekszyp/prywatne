@@ -1,44 +1,61 @@
 #include <iostream>
-#include<math.h>
+
 using namespace std;
 
-class Point
+class Punkt2D
 {
 private:
-	float x;
-	float y;
+    int x, y;
 public:
-	void set(float x, float y)
-	{
-		this->x = x;
-		this->y = y;
-	}
+    Punkt2D(int x, int y)
+    {
+        this->x = x;
+        this->y = y;
+    }
+    int getX()
+    {
+        return x;
+    }
+    int getY()
+    {
+        return y;
+    }
 
-	float getX()
-	{
-		return x;
-	}
-	float getY()
-	{
-		return y;
-	}
 };
-float distance(Point a, Point b)
+class Punkt3D
 {
-    float dist;
-    Point c = Point();
-    c.getX = b.getX()-a.getX();
-    c.getY = b.getY()-a.getY();
-    dist = sqrt(pow(c.getX(), 2)+pow(c.getY(), 2));
-    return dist;
-}
+private:
+    int x, y, z;
+public:
+    Punkt3D(int x, int y, int z)
+    {
+        this->x = x;
+        this->y = y;
+        this->z = z;
+    }
+    int getX()
+    {
+        return x;
+    }
+    int getY()
+    {
+        return y;
+    }
+    int getZ()
+    {
+        return z;
+    }
+
+};
+
 int main(int argc, char *argv[])
 {
-	Point a = Point();
-	a.set(6.2, 5.4);
-	Point b = Point();
-	b.set(3.1, 1.8);
-	cout << "Odleglosc miedzy punktami: "<<dist(a,b)<<endl;
+
+    Punkt2D p2d(1,2);
+    cout<<p2d.getX()<<" "<<p2d.getY()<<endl;
+    Punkt3D p3d(1,2, 4);
+    cout<<p3d.getX()<<" "<<p3d.getY()<<" "<<p3d.getZ()<<endl;
+
 
     return 0;
 }
